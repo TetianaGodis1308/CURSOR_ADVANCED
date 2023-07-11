@@ -40,13 +40,11 @@ console.log(marksForStudents);
 
 // TASK 4
 function getMarksForPairs (){
-    const max_marks = 5;
-    const min_marks = 1;
-    const marksRandom = Math.round((max_marks-min_marks)*Math.random(max_marks)+min_marks);
-    const marksRandom2 = Math.round((max_marks-min_marks)*Math.random(max_marks)+min_marks);
-    const marksRandom3 = Math.round((max_marks-min_marks)*Math.random(max_marks)+min_marks);
     const marksForPairs = [];
-    marksForPairs.push([themesForPairs[0], marksRandom], [themesForPairs[1], marksRandom2],[themesForPairs[2], marksRandom3] );
+    for (let i=0; i < 3; i++){
+        const marksRandom = Math.round(4*Math.random(5)+1);
+        marksForPairs.push([(themesForPairs[i]),marksRandom]);
+    }
     return marksForPairs;
 }
 const marksForPairs = getMarksForPairs ();
