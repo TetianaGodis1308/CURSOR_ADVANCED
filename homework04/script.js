@@ -43,7 +43,7 @@ function getMarksForPairs (){
     const marksForPairs = [];
     for (let i=0; i < 3; i++){
         const marksRandom = Math.round(4*Math.random(5)+1);
-        marksForPairs.push([(themesForPairs[i]),marksRandom]);
+        marksForPairs.push([(themesForPairs[i]) ,marksRandom]);
     }
     return marksForPairs;
 }
