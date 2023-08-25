@@ -36,12 +36,10 @@ console.log(getSubjects(students[0]))
 // Task 2
 function getAverageMark(students){
     const allMark = `${Object.values(students.subjects)}`.split(',');
-    let sum = 0;
-    for (let i = 0; i < allMark.length; i++){
-            sum = sum + (Number(allMark[i]));
-        }
-        const averageMark = sum / allMark.length;
-        return averageMark.toFixed(2)
+        const average = allMark.reduce((prevValue, item) => {
+            return Number(prevValue) + Number(item) 
+        })
+    return(average / allMark.length).toFixed(2)
     }
     console.log(getAverageMark(students[0]))
 // Task 3

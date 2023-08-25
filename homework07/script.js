@@ -16,17 +16,17 @@ function getMyTaxes(salary){
 }
 console.log(getMyTaxes.call(ukraine, 2000))
 // Task 2
-function getMiddleTaxes (country){
+function getMiddleTaxes (){
     return this.tax * this.middleSalary
 }
 console.log(getMiddleTaxes.call(ukraine))
 // Task 3
-function getTotalTaxes(country){
+function getTotalTaxes(){
     return this.tax * this.middleSalary * this.vacancies
 }
 console.log(getTotalTaxes.call(ukraine))
 // Task 4
-function getMySalary(country){
+function getMySalary(){
     const mySalary = {
         salary : Math.round(500 * Math.random(2000)+1500),
     }
